@@ -1,4 +1,4 @@
-# PawCalculator 🐾 [![Rust Version](https://img.shields.io/badge/rust-2024+-orange.svg)](https://www.rust-lang.org/)
+# PawCalculator 🐾 [![Rust Version](https://img.shields.io/badge/rust-1.70+-orange.svg)](https://www.rust-lang.org/)
 
 Консольный калькулятор на Rust с обычными и «кошачьими» операциями.
 
