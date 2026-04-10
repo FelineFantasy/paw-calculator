@@ -1,69 +1,69 @@
 # PawCalculator 🐾 [![Rust Version](https://img.shields.io/badge/rust-1.70+-orange.svg)](https://www.rust-lang.org/)
 
-Консольный калькулятор на Rust с обычными и «кошачьими» операциями.
+A console calculator in Rust with regular and "cat" operations.
 
-## 📋 Содержание
+## 📋 Table of Contents
 
-- [Описание](#описание)
-- [Как использовать](#как-использовать)
-- [Установка](#установка)
-- [Запуск](#запуск)
-- [Требования](#требования)
-- [Автор](#автор)
+- [Description](#description)
+- [How to Use](#how-to-use)
+- [Installation](#installation)
+- [Running](#running)
+- [Requirements](#requirements)
+- [Author](#author)
 
-## 📝 Описание
+## 📝 Description
 
-**PawCalculator** — это простой консольный калькулятор, который умеет выполнять базовые арифметические операции и выводить результат в «кошачьем» стиле.
+**PawCalculator** is a simple console calculator that can perform basic arithmetic operations and display results in a "cat" style.
 
-### Особенности:
-- 🎯 **Простота** — интуитивно понятный интерфейс
-- 🐱 **Кошачьи операции** — результат с лапками!
-- ➕ **4 операции** — сложение, вычитание, умножение, деление
-- 🔄 **Универсальность** — поддержка обычных и ฅ-операций
+### Features:
+- 🎯 **Simplicity** — Intuitive interface
+- 🐱 **Cat operations** — Results with paws!
+- ➕ **4 operations** — Addition, subtraction, multiplication, division
+- 🔄 **Versatility** — Support for regular and ฅ-operations
 
-## 🎮 Как использовать
+## 🎮 How to Use
 
-1. Запустите калькулятор
-2. Введите первое число
-3. Введите оператор (`+`, `-`, `*`, `/` или `ฅ+`, `ฅ-`, `ฅ*`, `ฅ/`)
-4. Введите второе число
-5. Получите результат!
+1. Run the calculator
+2. Enter the first number
+3. Enter the operator (`+`, `-`, `*`, `/` or `ฅ+`, `ฅ-`, `ฅ*`, `ฅ/`)
+4. Enter the second number
+5. Get the result!
 
-## ⚙️ Установка
+## ⚙️ Installation
 
-### Через Git:
+### Via Git:
 ```bash
 git clone https://github.com/FelineFantasy/paw-calculator.git
 cd paw-calculator
 ```
 
-### Добавьте в Cargo.toml:
+### Add to Cargo.toml:
 ```toml
 [dependencies]
 ask_input = "0.1.0"
 ```
 
-## 🚀 Запуск
+## 🚀 Running
 
 ```bash
 cargo run
 ```
 
-### Пример:
+### Example:
 ```
-Введите первое число: 5
-Введите оператор: ฅ+
-Введите второе число: 3
-5 + 3 = 8 Лапок
+Enter the first number: 5
+Enter the operator: ฅ+
+Enter the second number: 3
+5 + 3 = 8 Paws
 ```
 
-## 📋 Требования
+## 📋 Requirements
 
 - Rust 2024+
 - Cargo
 
-## 👤 Автор
+## 👤 Author
 
 **FelineFantasy**
 
-Лицензия: MIT
+License: MIT
