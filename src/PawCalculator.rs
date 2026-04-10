@@ -10,27 +10,27 @@ fn main() {
     println!("Введите второе число: ");
     let number2 = float_input();
 
-    if op == "+" {
-        println!("{} + {} = {}", number1, number2, number1 + number2);
-    } else if op == "-" {
-        println!("{} - {} = {}", number1, number2, number1 - number2);
-    } else if op == "*" {
-        println!("{} * {} = {}", number1, number2, number1 * number2);
-    } else if op == "/" {
-        println!("{} / {} = {}", number1, number2, number1 / number2);
-    } 
-    
-    else if op == "ฅ+" {
-        println!("{} + {} = {} Лапок", number1, number2, number1 + number2);
-    } else if op == "ฅ-" {
-        println!("{} - {} = {} Лапок", number1, number2, number1 - number2);
-    } else if op == "ฅ*" {
-        println!("{} * {} = {} Лапок", number1, number2, number1 * number2);
-    } else if op == "ฅ/" {
-        println!("{} / {} = {} Лапок", number1, number2, number1 / number2);
-    } 
-    
-    else {
-        println!("Неверный оператор!")
+    match op.as_str() {
+        "+" => println!("{} + {} = {}", number1, number2, number1 + number2),
+        "-" => println!("{} - {} = {}", number1, number2, number1 - number2),
+        "*" => println!("{} * {} = {}", number1, number2, number1 * number2),
+        "/" => {
+            if number2 == 0.0 {
+                println!("Ошибка: деление на ноль!");
+            } else {
+                println!("{} / {} = {}", number1, number2, number1 / number2);
+            }
+        }
+        "ฅ+" => println!("{} + {} = {} Лапок", number1, number2, number1 + number2),
+        "ฅ-" => println!("{} - {} = {} Лапок", number1, number2, number1 - number2),
+        "ฅ*" => println!("{} * {} = {} Лапок", number1, number2, number1 * number2),
+        "ฅ/" => {
+            if number2 == 0.0 {
+                println!("Ошибка: деление на ноль!");
+            } else {
+                println!("{} / {} = {} Лапок", number1, number2, number1 / number2);
+            }
+        }
+        _ => println!("Неверный оператор!"),
     }
 }
