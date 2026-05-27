@@ -4,4 +4,4 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-ask_input = "0.1.0"
+ask_input = "0.2.0"
