@@ -63,7 +63,5 @@ Enter the second number: 3
 - Cargo
 
 ## 👤 Author
-
-**FelineFantasy**
-
-License: MIT
+- **FelineFantasy**
+- **License**: MIT
