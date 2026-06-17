@@ -40,7 +40,7 @@ cd paw-calculator
 ### Add to Cargo.toml:
 ```toml
 [dependencies]
-ask_input = "0.1.0"
+ask_input = "0.2.0"
 ```
 
 ## 🚀 Running
