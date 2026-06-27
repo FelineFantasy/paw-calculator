@@ -51,10 +51,10 @@ cargo run
 
 ### Example:
 ```
-Enter the first number: 5
-Enter the operator: ฅ+
-Enter the second number: 3
-5 + 3 = 8 Paws
+Введите первое число: 5
+Введите оператор: ฅ+
+Введите второе число: 3
+5 + 3 = 8 Лапок
 ```
 
 ## 📋 Requirements
