@@ -4,9 +4,9 @@ version = 4
 
 [[package]]
 name = "ask_input"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c50a18ca1fff09bf0d939ee2c587c30471a999bdd6937edddf5bf1778cad3b65"
+checksum = "285f1d7bfaa911ba46e338cb15798a9330200fd3e086b09768de2e5726464954"
 
 [[package]]
 name = "paw_calculator"
