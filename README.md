@@ -2,14 +2,7 @@
 
 A console calculator in Rust with regular and "cat" operations.
 
-## 📋 Table of Contents
-
-- [Description](#description)
-- [How to Use](#how-to-use)
-- [Installation](#installation)
-- [Running](#running)
-- [Requirements](#requirements)
-- [Author](#author)
+**🦀 Rust version** – fast, safe, and compiled
 
 ## 📝 Description
 
@@ -29,24 +22,13 @@ A console calculator in Rust with regular and "cat" operations.
 4. Enter the second number
 5. Get the result!
 
-## ⚙️ Installation
+## 🛠️ Installation
 
-### Via Git:
 ```bash
 git clone https://github.com/FelineFantasy/paw-calculator.git
 cd paw-calculator
-```
-
-### Add to Cargo.toml:
-```toml
-[dependencies]
-ask_input = "0.3.0"
-```
-
-## 🚀 Running
-
-```bash
-cargo run
+cargo build --release
+./target/release/paw-calculator
 ```
 
 ### Example:
