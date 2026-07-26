@@ -12,7 +12,7 @@ fn main() {
 
     let is_cat_op = op.starts_with("ฅ");
 
-    let clean_op = if is_cat_op { &op[3..] } else { op.as_str() };
+    let clean_op = op.strip_prefix("ฅ").unwrap_or(&op);
 
     if clean_op == "/" && number2 == 0.0 {
         println!("Ошибка: деление на ноль!");
