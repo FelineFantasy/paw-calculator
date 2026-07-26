@@ -10,7 +10,7 @@ fn main() {
     println!("Введите второе число: ");
     let number2: f64 = input().expect("Ошибка ввода числа");
 
-    let is_cat_op = op.starts_with('ฅ');
+    let is_cat_op = op.starts_with("ฅ");
 
     let clean_op = if is_cat_op { &op[3..] } else { op.as_str() };
 
