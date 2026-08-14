@@ -47,6 +47,19 @@ cargo build --release
 - Rust 2024+
 - Cargo
 
+## 💖 Support the Project
+
+If you enjoy **PawCalculator** and want to help keep the project alive, you can support me here:
+
+[![DonationAlerts](https://img.shields.io/badge/DonationAlerts-Support-blue.svg)](https://www.donationalerts.com/r/felinefantasy)
+
+Your support helps me:
+- 🦀 Keep developing Rust projects
+- 🐱 Add new cat operations and features
+- ☕ Stay awake while coding at 4 AM
+
+Every little bit is appreciated! ❤️
+
 ## 👤 Author
 - **FelineFantasy**
 - **License**: MIT
