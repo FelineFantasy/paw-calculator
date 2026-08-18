@@ -25,7 +25,7 @@ A console calculator in Rust with regular and "cat" operations.
 ## 🛠️ Installation
 
 ```bash
-git clone https://github.com/FelineFantasy/paw-calculator.git
+git clone https://github.com/FelineFantasy/paw-calculator
 cd paw-calculator
 cargo build --release
 ./target/release/paw-calculator
