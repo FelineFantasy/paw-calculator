@@ -10,11 +10,10 @@ fn main() {
     println!("Введите второе число: ");
     let number2: f64 = input().expect("Ошибка ввода числа");
 
-
     let clean_op = op.strip_prefix("ฅ").unwrap_or(&op);
     let is_cat_op = clean_op != op;
 
-    if clean_op == "/" && number2 == 0.0 {
+    if clean_op == "/" && number2.abs() < f64::EPSILON {
         println!("Ошибка: деление на ноль!");
         return;
     }
