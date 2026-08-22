@@ -1,5 +1,7 @@
 use ask_input::input;
 
+const ZERO_THRESHOLD: f64 = 1e-12;
+
 fn main() {
     println!("Введите первое число: ");
     let number1: f64 = input().expect("Ошибка ввода числа");
@@ -13,7 +15,7 @@ fn main() {
     let clean_op = op.strip_prefix("ฅ").unwrap_or(&op);
     let is_cat_op = clean_op != op;
 
-    if clean_op == "/" && number2.abs() < f64::EPSILON {
+    if clean_op == "/" && number2.abs() < ZERO_THRESHOLD {
         println!("Ошибка: деление на ноль!");
         return;
     }
