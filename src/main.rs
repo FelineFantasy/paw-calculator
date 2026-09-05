@@ -43,3 +43,4 @@ fn get_operator() -> char {
         .next()
         .unwrap_or(' ')
 }
+
