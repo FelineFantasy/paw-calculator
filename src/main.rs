@@ -27,3 +27,17 @@ fn main() {
     let suffix = if is_cat_op { " Лапок" } else { "" };
     println!("{} {} {} = {}{}", number1, clean_op, number2, result, suffix);
 }
+
+fn get_number(prompt: &str) -> f64 {
+    println!("{}", prompt);
+    input().expect("Ошибка ввода числа").parse().expect("Ошибка: введите число")
+}
+
+fn get_operator() -> char {
+    println!("Введите оператор: ");
+    input()
+        .expect("Ошибка ввода оператора")
+        .chars()
+        .next()
+        .unwrap_or(' ')
+}
