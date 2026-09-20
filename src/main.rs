@@ -30,12 +30,12 @@ fn main() {
 
 fn get_number(prompt: &str) -> f64 {
     println!("{}", prompt);
-    input().expect("Ошибка ввода числа").parse().expect("Ошибка: введите число")
+    input::<f64>().expect("Ошибка: введите число")
 }
 
 fn get_operator() -> char {
     println!("Введите оператор: ");
-    input()
+    input::<String>()
         .expect("Ошибка ввода оператора")
         .chars()
         .next()
