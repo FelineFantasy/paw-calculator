@@ -5,8 +5,8 @@ fn main() {
     let op = get_operator();
     let number2 = get_number("Введите второе число: ");
 
-    let clean_op = if op == 'ฅ' { '+' } else { op };
     let is_cat_op = op == 'ฅ';
+    let clean_op = if is_cat_op { '+' } else { op };
 
     if clean_op == '/' && number2 == 0.0 {
         println!("Ошибка: деление на ноль!");
