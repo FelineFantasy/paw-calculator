@@ -39,5 +39,5 @@ fn get_operator() -> char {
         .expect("Ошибка ввода оператора")
         .chars()
         .next()
-        .unwrap_or(' ')
+        .expect("Ошибка: оператор не введён")
 }
