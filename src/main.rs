@@ -1,4 +1,5 @@
 use ask_input::input;
+use std::io::{self, Write};
 
 fn main() {
     let number1 = get_number("Введите первое число: ");
@@ -29,12 +30,14 @@ fn main() {
 }
 
 fn get_number(prompt: &str) -> f64 {
-    println!("{}", prompt);
+    print!("{}", prompt);
+    io::stdout().flush().unwrap();
     input::<f64>().expect("Ошибка: введите число")
 }
 
 fn get_operator() -> char {
-    println!("Введите оператор: ");
+    print!("Введите оператор: ");
+    io::stdout().flush().unwrap();
     input::<String>()
         .expect("Ошибка ввода оператора")
         .chars()
