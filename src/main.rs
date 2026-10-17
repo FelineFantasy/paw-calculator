@@ -9,16 +9,17 @@ fn main() {
     let is_cat_op = op == 'ฅ';
     let clean_op = if is_cat_op { '+' } else { op };
 
-    if clean_op == '/' && number2 == 0.0 {
-        println!("Ошибка: деление на ноль!");
-        return;
-    }
-
     let result = match clean_op {
         '+' => number1 + number2,
         '-' => number1 - number2,
         '*' => number1 * number2,
-        '/' => number1 / number2,
+        '/' => {
+            if number2 == 0.0 {
+                println!("Ошибка: деление на ноль!");
+                return;
+            }
+            number1 / number2
+        }
         _ => {
             println!("Неверный оператор!");
             return;
