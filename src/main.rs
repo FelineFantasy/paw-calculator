@@ -20,10 +20,7 @@ fn main() {
             }
             number1 / number2
         }
-        _ => {
-            println!("Неверный оператор!");
-            return;
-        }
+        _ => unreachable!(), // Оператор гарантированно валиден благодаря get_operator
     };
 
     let suffix = if is_cat_op { " Лапок" } else { "" };
@@ -37,11 +34,18 @@ fn get_number(prompt: &str) -> f64 {
 }
 
 fn get_operator() -> char {
-    print!("Введите оператор: ");
-    io::stdout().flush().unwrap();
-    input::<String>()
-        .expect("Ошибка ввода оператора")
-        .chars()
-        .next()
-        .expect("Ошибка: оператор не введён")
+    loop {
+        print!("Введите оператор (+, -, *, /, ฅ): ");
+        io::stdout().flush().unwrap();
+        let op = input::<String>()
+            .expect("Ошибка ввода оператора")
+            .chars()
+            .next()
+            .unwrap_or(' ');
+
+        if ['+', '-', '*', '/', 'ฅ'].contains(&op) {
+            return op;
+        }
+        println!("Ошибка: неверный оператор. Попробуйте снова.");
+    }
 }
