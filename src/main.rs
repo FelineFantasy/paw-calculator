@@ -14,29 +14,33 @@ fn main() {
     let op = get_operator();
     let number2 = get_number("Введите второе число: ");
 
-    let result = match op {
-        Operator::Add | Operator::CatAdd => Some(number1 + number2),
-        Operator::Sub => Some(number1 - number2),
-        Operator::Mul => Some(number1 * number2),
+    match calculate(number1, number2, &op) {
+        Ok(res) => {
+            let (op_char, suffix) = match op {
+                Operator::Add => ('+', ""),
+                Operator::Sub => ('-', ""),
+                Operator::Mul => ('*', ""),
+                Operator::Div => ('/', ""),
+                Operator::CatAdd => ('+', " Лапок"),
+            };
+            println!("{} {} {} = {}{}", number1, op_char, number2, res, suffix);
+        }
+        Err(err) => println!("Ошибка: {}", err),
+    }
+}
+
+fn calculate(num1: f64, num2: f64, op: &Operator) -> Result<f64, &'static str> {
+    match op {
+        Operator::Add | Operator::CatAdd => Ok(num1 + num2),
+        Operator::Sub => Ok(num1 - num2),
+        Operator::Mul => Ok(num1 * num2),
         Operator::Div => {
-            if number2 == 0.0 {
-                println!("Ошибка: деление на ноль!");
-                None
+            if num2 == 0.0 {
+                Err("деление на ноль!")
             } else {
-                Some(number1 / number2)
+                Ok(num1 / num2)
             }
         }
-    };
-
-    if let Some(res) = result {
-        let (op_char, suffix) = match op {
-            Operator::Add => ('+', ""),
-            Operator::Sub => ('-', ""),
-            Operator::Mul => ('*', ""),
-            Operator::Div => ('/', ""),
-            Operator::CatAdd => ('+', " Лапок"),
-        };
-        println!("{} {} {} = {}{}", number1, op_char, number2, res, suffix);
     }
 }
 
