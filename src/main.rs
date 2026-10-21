@@ -55,7 +55,7 @@ fn get_operator() -> Operator {
         print!("Введите оператор (+, -, *, /, ฅ): ");
         io::stdout().flush().unwrap();
         let op_str = input::<String>().expect("Ошибка ввода оператора");
-        
+
         match op_str.trim() {
             "+" => return Operator::Add,
             "-" => return Operator::Sub,
